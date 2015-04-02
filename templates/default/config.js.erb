@@ -16,10 +16,11 @@ function (Settings) {
       <% type=options['type'] %>
       '<%= name %>': {
         type: '<%= type %>',
-        url: <%= options['url'] %>,        
+        url: '<%= options['url'] %>',        
         <% if type == 'influxdb' %>
-        username: <%= options['username'] %>,
-        password: <%= options['password'] %>,
+        username: '<%= options['username'] %>',
+        password: '<%= options['password'] %>',
+        grafanaDB: <%= options['grafanaDB'] || 'false' %>,
         <% end %>
         default: <%= options['default'] || 'false' %>
       },
@@ -29,7 +30,6 @@ function (Settings) {
     // elasticsearch url
     // used for storing and loading dashboards, optional
     // For Basic authentication use: http://username:password@domain.com:9200
-    elasticsearch: <%= @elasticsearch_url %>,
 
     // default start dashboard
     default_route: '/dashboard/file/default.json',

@@ -1,6 +1,6 @@
 grafana Cookbook
 ================
-Installs [Grafana](https://github.com/torkelo/grafana) with nginx or apache backend.
+Installs [Grafana](https://github.com/grafana/grafana) with nginx or apache backend.
 
 Requirements
 ------------
@@ -11,9 +11,9 @@ Requirements
 
 Attributes
 ----------
-- `default['grafana']['revision']` - the revision to install, default: 58dbb01e76f4412ee150e86587296de0bb83aba9
+- `default['grafana']['revision']` - the revision to install, default: f5e8f9334be707c54f2080a2df3cb0f20e4d995a
 - `default['grafana']['install_dir']` - installation directory, default: "/opt/grafana"
-- `default['grafana']['repo']` - repository to checkout from, default: "https://github.com/torkelo/grafana.git"
+- `default['grafana']['repo']` - repository to checkout from, default: "https://github.com/grafana/grafana.git"
 - `default['grafana']['elasticsearch_url']` - elasticserach url. there is a possiblity to use js as well. default: '"http://"+window.location.hostname+":9200"'
 - `default['grafana']['graphite_url']` - graphite url. there is a possiblity to use js as well. '"http://"+window.location.hostname+":8080"'
 - `default['grafana']['port']` - port the web server will listen to. defaults to 80.
